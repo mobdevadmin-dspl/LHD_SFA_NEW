@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Loading No"
+                android:textColor="@color/greenColor"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/sa_header_order_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:textColor="@android:color/black"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/greenColor"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/sa_header_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:textColor="@android:color/black"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Manual No"
+                android:textColor="@color/greenColor"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/sa_header_manual_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@android:color/black"></EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Remarks"
+                android:textColor="@color/greenColor"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/sa_header_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"></EditText>
+
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/black" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Location From"
+                android:textColor="@color/greenColor"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etlocfrom_item"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"></EditText>
+
+            <Button
+                android:id="@+id/btn_locfrom_search"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_action_search_copy" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Location To"
+                android:textColor="@color/greenColor"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etlocto_item"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"></EditText>
+
+            <Button
+                android:id="@+id/btn_locto_search"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_action_search_copy" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_viewprevi"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_default_bg"
+        android:ems="10"
+        android:text="Previous Loading"
+        android:textColor="@android:color/white"></Button>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black" />
+
+    <Button
+        android:id="@+id/btnselectitem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_default_bg"
+        android:text="Select Items >>"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="normal" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/printindex"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="1"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/printitemname"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:paddingLeft="2dip"
+            android:text="Item Name"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/printamount"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:paddingLeft="2dip"
+            android:text="000,000,000.00"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp">
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:id="@+id/btnTourDebtor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_label"
+            android:paddingLeft="10dp"
+            android:text="Tour Customers"
+            android:textAlignment="center"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/customer_spinner_text_size"
+            android:visibility="gone" />
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:id="@+id/btnAllDebtor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_label"
+            android:paddingLeft="10dp"
+            android:text="All Customers"
+            android:textAlignment="center"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/customer_spinner_text_size"
+            android:visibility="gone"/>
+
+    </TableRow>
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/tour_spinner_top_margin">
+
+        <Spinner
+            android:id="@+id/spnTour"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tour_spinner_height"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_textbox"/>
+
+    </TableRow>
+
+    <TableRow
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/tour_spinner_top_margin">
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:id="@+id/txtSelCust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="11"
+            android:background="@drawable/custom_label"
+            android:paddingLeft="10dp"
+            android:text="- No Customer Selected -"
+            android:textAlignment="center"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/customer_spinner_text_size"
+            />
+
+        <ImageButton
+            android:id="@+id/btnCust"
+            android:layout_width="@dimen/tour_spinner_height"
+            android:layout_height="@dimen/tour_spinner_height"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/cus" />
+
+        <ImageButton
+            android:id="@+id/btnsearch_cus"
+            android:layout_width="@dimen/tour_spinner_height"
+            android:layout_height="@dimen/tour_spinner_height"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/search_cus" />
+
+
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontal_line_height"
+        android:background="@android:color/darker_gray"/>
+
+    <ListView
+        android:id="@+id/cus_lv"
+        android:divider="@color/list_view_diveder"
+        android:dividerHeight="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblCusName"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_textbox"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapCus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></com.google.android.gms.maps.MapView>
+
+</LinearLayout>

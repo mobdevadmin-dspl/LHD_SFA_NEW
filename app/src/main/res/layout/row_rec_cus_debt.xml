@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="9" >
+
+    <TextView
+        android:id="@+id/txtRefno"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="Invoice no" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:text="Date" />
+    
+    <TextView
+        android:id="@+id/txtRepName"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="RepName" />
+
+    <TextView
+        android:id="@+id/txtEntRemark"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="EntRemark" />
+    <TextView
+        android:id="@+id/txtAge"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="1dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="Age" />
+
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_weight="2.0"
+        android:gravity="center"
+        android:text="Amount" />
+
+</LinearLayout>

@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="5dp">
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:id="@+id/lblMessage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Today&apos;s tour specifics\nare already entered !"
+            android:textColor="@color/greenColor"
+            android:textSize="40sp"
+            android:textAllCaps="true"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/tour_spinner_top_margin"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spnTour"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/tour_spinner_height"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/custom_textbox"/>
+
+                </TableRow>
+
+                <LinearLayout
+                    android:id="@+id/lnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="DATE"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all"
+                            />
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+                        <EditText
+                            android:id="@+id/et_tour_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:editable="false"
+                            android:gravity="center_horizontal"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp">
+
+                            <requestFocus />
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="START TIME"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_start_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:editable="false"
+                            android:gravity="center_horizontal"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp"
+                        android:visibility="gone">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="LOCATION"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:editable="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp"
+                        android:visibility="gone">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="SALES REP"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_sal_rep"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:editable="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp"
+                        android:visibility="gone">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="TERRITORY"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_territory"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:editable="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp"
+                        android:visibility="gone">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="COST CENTER"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_cost_center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:editable="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="VEHICLE"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_vehicle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="DRIVER"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/et_driver"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingTop="0dp">
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="ASSISTANT"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+                        <EditText
+                            android:id="@+id/et_Assist"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="ROUTE"
+                            android:textColor="@color/greenColor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+                        <EditText
+                            android:id="@+id/txtRoute"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="METER READING"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+                        <EditText
+                            android:id="@+id/tv_startKm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingBottom="5dp">
+
+                        <Button
+                            android:id="@+id/btn_start"
+                            android:theme="@style/AppTheme.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="START"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnFinish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="END TIME"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all"/>
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/txtEndTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:ems="10"
+                             android:editable="false"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="END KM"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/txtEndKm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical">
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".75"
+                            android:gravity="right"
+                            android:paddingRight="10dp"
+                            android:text="DISTANCE"
+                            android:textAllCaps="true"
+                            android:textColor="@color/greenColor"
+                            android:textSize="@dimen/font_for_all" />
+
+                        <com.lankahardwared.lankahw.control.FinacFont
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text=":-"
+                            android:textSize="@dimen/font_for_all"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/txtDistance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+
+                            android:ems="10"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingBottom="5dp">
+
+                        <Button
+                            android:id="@+id/btn_End"
+                            android:theme="@style/AppTheme.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="FINISH"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

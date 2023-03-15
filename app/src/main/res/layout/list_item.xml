@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/dm_logo_64" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/icon"
+        android:text="Small Text"
+        android:textColor="@color/blueColor"
+        android:textSize="14sp" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDesc"
+        android:layout_alignTop="@+id/icon"
+        android:text="Medium Text"
+        android:textColor="@color/blueColor"
+        android:textSize="@dimen/font_for_all" />
+
+</RelativeLayout>

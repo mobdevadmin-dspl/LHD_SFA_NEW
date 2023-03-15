@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="vertical" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="Item"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <EditText
+                        android:id="@+id/et_DiscItem"
+                        android:layout_width="450dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custom_label"
+                        android:enabled="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_intermed"></EditText>
+
+                    <Button
+                        android:id="@+id/btn_DiscItemSearch"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/search_button" />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/table_row_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="Unit"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <EditText
+                        android:id="@+id/et_DiscUnit"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/custom_label"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_medium">
+
+                    </EditText>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="Price"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <EditText
+                        android:id="@+id/et_DiscPrice"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:inputType="numberDecimal"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_medium">
+
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="Cases :"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_intermed"
+                        android:textStyle="italic"
+                        android:visibility="invisible" />
+
+                    <EditText
+                        android:id="@+id/et_DiscCases"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_intermed"
+                        android:visibility="invisible">
+
+                    </EditText>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="Pieces"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <EditText
+                        android:id="@+id/et_DiscPieces"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_textbox"
+                        android:gravity="right"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_medium">
+
+                    </EditText>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="Remnant"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tv_DiscValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_medium"></TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="Total"
+                        android:textColor="@color/greenColor"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tv_SaleValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/font_size_medium">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        style="@style/btnStyleBeige"
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Add" />
+
+
+                </TableRow>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1.25"
+            android:background="@drawable/custom_label"
+            android:gravity="center"
+            android:text="Item Description"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greenColor"
+            android:textSize="@dimen/font_size_intermed"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexhistory3"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="0.8"
+            android:background="@drawable/custom_label"
+            android:gravity="center"
+            android:text="Qty"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greenColor"
+            android:textSize="@dimen/font_size_intermed"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexmanual3"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/custom_label"
+            android:gravity="center"
+            android:text="Amount"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greenColor"
+            android:textSize="@dimen/font_size_intermed"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_orddet_disc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

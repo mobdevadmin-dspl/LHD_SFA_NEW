@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.datamation.deltex.dashboard">
+
+    <item
+        android:id="@+id/dashboard_cus_credit"
+        android:icon="@drawable/cus_credit"
+        android:title="Credit report"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/dashboard_monitor"
+        android:icon="@drawable/monitor"
+        android:title="Monitor"
+        app:showAsAction="always" />
+
+</menu>

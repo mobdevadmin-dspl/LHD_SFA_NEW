@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.lankahardwared.lankahw.view.vansale.Chatfont
+            android:id="@+id/Tdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:textColor="#000" />
+
+        <com.lankahardwared.lankahw.view.vansale.Chatfont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/Tcustomer"
+            android:padding="20dp"
+            android:gravity="left"
+            android:textSize="15sp"
+            android:text="-"
+            android:textColor="#000" />
+
+
+        <com.lankahardwared.lankahw.view.vansale.Chatfont
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:gravity="left"
+            android:textSize="15sp"
+            android:text="-"
+            android:id="@+id/Titem"
+            android:textColor="#000" />
+
+    </LinearLayout>
+</LinearLayout>

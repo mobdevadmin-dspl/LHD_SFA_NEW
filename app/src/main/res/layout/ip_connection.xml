@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http://123.231.13.199:1025"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/blueColor"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_ip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_textbox"
+            android:hint="123.231.13.199:1025"
+            android:inputType="text"
+            android:text="123.231.13.199:1025">
+
+        </EditText>
+    </TableRow>
+
+</LinearLayout>

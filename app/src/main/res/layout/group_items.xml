@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_hed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/header_reFNo"
+            android:layout_width="220dp"
+            android:layout_height="25dp"
+            android:paddingLeft="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="left"
+            android:text="REF NO"
+            android:textSize="16sp"
+            android:textColor="@color/blueColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDATE_header"
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/header_reFNo"
+            android:layout_toRightOf="@+id/header_reFNo"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="TXN DATE"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_debcode_header"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtDATE_header"
+            android:layout_toRightOf="@+id/txtDATE_header"
+            android:gravity="center"
+            android:text="DEBTOR"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+  <!--  <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+-->
+</RelativeLayout>

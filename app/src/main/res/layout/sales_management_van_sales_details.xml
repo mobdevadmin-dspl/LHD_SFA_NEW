@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="PRODUCT"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/lblProduct_Inv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/custom_label"
+                        android:enabled="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"></EditText>
+
+                    <Button
+                        android:id="@+id/btnSearch_Inv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/search_button" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="UNITS"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblNOU_Inv"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="PRICE"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblPrice_Inv"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="0dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="QTY"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/txtQty_Inv"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_textbox"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:text="0"></EditText>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="DISC"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblDisc_Inv"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:gravity="right"
+                        android:inputType="numberDecimal"
+                        android:selectAllOnFocus="true"
+                        android:text="0">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="AMOUNT"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblAmt_Inv"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"></TextView>
+                </TableRow>
+
+                <!-- <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="DISCOUNT"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblTotalDisc"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" >
+                    </TextView>
+                </TableRow> -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:text="TOTAL"
+                        android:textColor="@color/greenColor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lblTotal_Inv"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_label"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:gravity="right"
+                        android:text="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"></TextView>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btn_add_Inv"
+                        style="@style/btnStyleBeige"
+                        android:layout_width="140dp"
+                        android:layout_height="45dp"
+                        android:text="ADD"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn_free_Inv"
+                        style="@style/btnStyleBeige"
+                        android:layout_width="140dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="FREE / DISC"
+                        android:visibility="visible" />
+                </TableRow>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1.25"
+            android:background="@drawable/custom_label"
+            android:gravity="center"
+            android:text="PRODUCT"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greenColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexhistory3"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight=".8"
+            android:background="@drawable/custom_label"
+            android:gravity="center"
+            android:text="QTY"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greenColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexmanual3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_label"
+            android:gravity="center"
+            android:text="AMOUNT"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greenColor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvOrder_Inv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

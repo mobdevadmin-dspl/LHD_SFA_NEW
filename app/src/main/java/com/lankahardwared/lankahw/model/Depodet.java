@@ -1,0 +1,75 @@
+package com.lankahardwared.lankahw.model;
+
+/**
+ * Created by Yasith on 3/1/2019.
+ */
+
+public class Depodet {
+    private String FBANKDEPODET_ID;
+    private String FBANKDEPODET_REFNO;
+    private String FBANKDEPODET_RECEIPT_REFNO;
+    private String FBANKDEPODET_DEBTOR_CODE;
+    private String FBANKDEPODET_RECEIPT_TXNDATE;
+    private String FBANKDEPODET_RECEIPT_CHEQNO;
+    private String FBANKDEPODET_RECEIPT_AMT;
+
+
+
+    public String getFBANKDEPODET_ID() {
+        return FBANKDEPODET_ID;
+    }
+
+    public void setFBANKDEPODET_ID(String FBANKDEPODET_ID) {
+        this.FBANKDEPODET_ID = FBANKDEPODET_ID;
+    }
+
+    public String getFBANKDEPODET_REFNO() {
+        return FBANKDEPODET_REFNO;
+    }
+
+    public void setFBANKDEPODET_REFNO(String FBANKDEPODET_REFNO) {
+        this.FBANKDEPODET_REFNO = FBANKDEPODET_REFNO;
+    }
+
+    public String getFBANKDEPODET_RECEIPT_REFNO() {
+        return FBANKDEPODET_RECEIPT_REFNO;
+    }
+
+    public void setFBANKDEPODET_RECEIPT_REFNO(String FBANKDEPODET_RECEIPT_REFNO) {
+        this.FBANKDEPODET_RECEIPT_REFNO = FBANKDEPODET_RECEIPT_REFNO;
+    }
+
+    public String getFBANKDEPODET_DEBTOR_CODE() {
+        return FBANKDEPODET_DEBTOR_CODE;
+    }
+
+    public void setFBANKDEPODET_DEBTOR_CODE(String FBANKDEPODET_DEBTOR_CODE) {
+        this.FBANKDEPODET_DEBTOR_CODE = FBANKDEPODET_DEBTOR_CODE;
+    }
+
+    public String getFBANKDEPODET_RECEIPT_TXNDATE() {
+        return FBANKDEPODET_RECEIPT_TXNDATE;
+    }
+
+    public void setFBANKDEPODET_RECEIPT_TXNDATE(String FBANKDEPODET_RECEIPT_TXNDATE) {
+        this.FBANKDEPODET_RECEIPT_TXNDATE = FBANKDEPODET_RECEIPT_TXNDATE;
+    }
+
+    public String getFBANKDEPODET_RECEIPT_CHEQNO() {
+        return FBANKDEPODET_RECEIPT_CHEQNO;
+    }
+
+    public void setFBANKDEPODET_RECEIPT_CHEQNO(String FBANKDEPODET_RECEIPT_CHEQNO) {
+        this.FBANKDEPODET_RECEIPT_CHEQNO = FBANKDEPODET_RECEIPT_CHEQNO;
+    }
+
+    public String getFBANKDEPODET_RECEIPT_AMT() {
+        return FBANKDEPODET_RECEIPT_AMT;
+    }
+
+    public void setFBANKDEPODET_RECEIPT_AMT(String FBANKDEPODET_RECEIPT_AMT) {
+        this.FBANKDEPODET_RECEIPT_AMT = FBANKDEPODET_RECEIPT_AMT;
+    }
+
+
+}

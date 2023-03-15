@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Location From"
+            android:textColor="@color/greenColor"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/etlocfrom_item_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"></EditText>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="3dp"
+
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Location To"
+            android:textColor="@color/greenColor"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/etlocto_item_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"></EditText>
+
+
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e3e3e3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1.25"
+            android:background="@color/list_background_pressed"
+            android:gravity="center"
+            android:text="Item Description"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexhistory3"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1"
+            android:background="@color/list_background_pressed"
+            android:gravity="center"
+            android:text="Cases"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexmanual3"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="0.50"
+            android:background="@color/list_background_pressed"
+            android:gravity="center"
+            android:text="Pieces"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/indexmanual4"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="0.50"
+            android:background="@color/list_background_pressed"
+            android:gravity="center"
+            android:text="Reason"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_loading_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

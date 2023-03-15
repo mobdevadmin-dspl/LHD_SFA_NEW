@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="75dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/edit_txt_color"
+                android:gravity="center|bottom"
+                android:textSize="@dimen/font_for_heddebname"
+                android:id="@+id/route_name"
+                android:layout_weight="0.10" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/attendance_tv_begin_header"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="DAY START"
+            android:textColor="@color/button_text_color"
+            android:background="@color/blue_semi_transparent"
+            android:textSize="20sp"
+            android:clickable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:divider="@color/ColorPrimaryDark"
+            android:dividerPadding="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/ColorPrimaryDark" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Route Type:-"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:id="@+id/txt_rute"
+                android:layout_weight="0.08" />
+            <Spinner
+                android:id="@+id/spnRoteType"
+                android:layout_width="25dp"
+                android:layout_weight="0.94"
+                android:textSize="20sp"
+                android:gravity="right"
+                android:textColor="@color/edit_txt_color"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Date :-"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:id="@+id/txt_date"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_date"
+                android:clickable="false"
+                android:editable="false"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="0.96" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Start Time :-"
+                android:gravity="left"
+                android:id="@+id/txt_strat_time"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_start_time"
+                android:clickable="false"
+                android:editable="false"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Vehicle No :-"
+                android:textSize="@dimen/font_for_all"
+                android:gravity="left"
+                android:id="@+id/txt_vehical_no"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_vehical_no"
+                android:maxLength="20"
+                android:hint="Enter Vehicle No"
+                android:textColorHint="@color/red_error"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Driver :-"
+                android:gravity="left"
+                android:id="@+id/txt_driver"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:id="@+id/etxt_drive"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/red_error"
+                android:hint="Enter Driver Name"
+                android:maxLength="50"
+                android:layout_weight="1.01"
+                android:textColor="@color/edit_txt_color" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Assistant :-"
+                android:gravity="left"
+                android:id="@+id/txt_assistant"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_assistant"
+                android:hint="Enter Assistant Name"
+                android:maxLength="50"
+                android:textColorHint="@color/red_error"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Start Km :-"
+                android:textSize="@dimen/font_for_all"
+                android:gravity="left"
+                android:id="@+id/txt_start_km"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_start_km"
+                android:hint="Enter Start KM"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/red_error"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Route :-"
+                android:id="@+id/txt_route"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.11" />
+
+            <EditText
+                android:id="@+id/etxt_route"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.01"
+                android:hint="Enter Route"
+                android:maxLength="100"
+                android:textColor="@color/edit_txt_color"
+                android:textColorHint="@color/red_error" />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/btn_search"
+                android:background="@drawable/ic_serach"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/attendance_tv_end_header"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="DAY END"
+            android:clickable="false"
+            android:background="@color/blue_semi_transparent"
+            android:textSize="20sp"
+            android:textColor="@color/button_text_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="16dp"/>
+        <View
+
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/attendance_tv_end_header"
+            android:background="@color/ColorPrimaryDark" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="End Date :-"
+                android:id="@+id/txt_end_date"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_end_date"
+                android:clickable="false"
+                android:editable="false"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="End Time :-"
+                android:id="@+id/txt_end_time"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_end_time"
+                android:clickable="false"
+                android:editable="false"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="End Km :-"
+                android:id="@+id/txt_end_km"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_end_km"
+                android:inputType="numberDecimal"
+                android:hint="Enter End KM"
+                android:textColorHint="@color/red_error"
+                android:textColor="@color/edit_txt_color"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Distance Km :-"
+                android:id="@+id/txt_distance_km"
+                android:gravity="left"
+                android:textSize="@dimen/font_for_all"
+                android:layout_weight="0.10" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_distance_km"
+                android:textColor="@color/edit_txt_color"
+                android:editable="false"
+                android:clickable="false"
+                android:layout_weight="1.01" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:divider="@color/ColorPrimaryDark"
+            android:dividerPadding="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/ColorPrimaryDark" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:gravity="center"
+            android:background="@drawable/menu_button_background"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/linearLayout10">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_btn_start"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_new_save"
+                app:layout_anchor="@+id/item_detail_container"
+                app:layout_anchorGravity="top|center" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_btn_end"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_new_save"
+                app:layout_anchor="@+id/item_detail_container"
+                app:layout_anchorGravity="top|center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

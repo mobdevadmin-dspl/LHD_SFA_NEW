@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cus_reg_undo"
+        android:icon="@drawable/dispose"
+        android:showAsAction="ifRoom"
+        android:title="Undo" />
+    <item
+        android:id="@+id/cus_reg_save"
+        android:icon="@drawable/loc_save"
+        android:showAsAction="ifRoom"
+        android:title="Save" />
+
+</menu>

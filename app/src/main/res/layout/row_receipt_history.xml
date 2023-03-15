@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/refno"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="refno text"
+        android:textColor="@color/blue_c"
+        android:textSize="@dimen/font_size_medium" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/refno"
+        android:text="date text"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/font_for_all" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/date"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text="amount Text"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/font_size_medium" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/addeddate"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/date"
+        android:layout_alignBottom="@+id/date"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text=""
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="21dp"
+        android:textStyle="italic" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/date"
+        android:layout_below="@+id/date"
+        android:text="customer"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="21dp"
+        android:textStyle="italic" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/handlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/amount"
+        android:layout_below="@+id/addeddate"
+        android:text="Hand Location"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="21dp"
+        android:visibility="invisible"
+        android:textStyle="italic" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/customer"
+        android:text="start time"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="21dp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/endtime"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/starttime"
+        android:layout_alignBottom="@+id/starttime"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text="end time"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="21dp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/uploadtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/starttime"
+        android:text="upload time"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="21dp"
+        android:textStyle="italic" 
+        android:visibility="gone"/>
+</RelativeLayout>

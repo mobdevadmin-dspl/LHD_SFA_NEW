@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/et_search"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/finac_search_edititext_height"
+        android:layout_margin="@dimen/finac_medium_margin"
+        android:background="@drawable/custom_textbox"
+        app:iconifiedByDefault="true"
+        app:queryHint="Type you keyword here..." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/finac_large_text_view_height"
+        android:layout_marginLeft="@dimen/finac_medium_margin"
+        android:layout_marginRight="@dimen/finac_medium_margin"
+        android:layout_marginTop="@dimen/finac_medium_margin"
+        android:orientation="horizontal">
+
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0.6"
+            android:background="@drawable/custom_label"
+            android:gravity="center_horizontal"
+            android:text="PRODUCT"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/finac_medium_text_size"
+            android:textStyle="bold" />
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/custom_label"
+            android:gravity="center_horizontal"
+            android:text="PRICE"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/finac_medium_text_size"
+            android:textStyle="bold" />
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:background="@drawable/custom_label"
+            android:gravity="center_horizontal"
+            android:text="QOH"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/finac_medium_text_size"
+            android:textStyle="bold" />
+
+        <com.lankahardwared.lankahw.control.FinacFont
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_label"
+            android:gravity="center_horizontal"
+            android:text="QTY"
+            android:textColor="@color/unselected"
+            android:textSize="@dimen/finac_medium_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_view_diveder"
+        android:dividerHeight="1dp"
+        android:layout_margin="@dimen/finac_medium_margin"></ListView>
+
+</LinearLayout>

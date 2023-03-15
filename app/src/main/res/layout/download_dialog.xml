@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_bg"
+    android:orientation="vertical">
+
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Download Summary"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#dcdcdc"></View>
+
+    <ListView
+        android:id="@+id/download_listview"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"></ListView>
+
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field6"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field7"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field8"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field9"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field10"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field12"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field13"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field14"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field16"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field17"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field18"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field19"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field20"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field21"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Routename" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field22"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="TextView" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field24"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field25"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field26"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field27"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field28"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field29"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field30"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field31"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field32"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:singleLine="false"-->
+            <!--android:maxLines="2"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+
+    <!--</TableRow>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:padding="2dp"-->
+        <!--android:background="#795548"></View>-->
+    <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="2dp"-->
+        <!--android:weightSum="2">-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field33"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="#FF9800"></View>-->
+
+        <!--<com.lankahardwared.lankahw.control.FinacFont-->
+            <!--android:id="@+id/field34"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="" />-->
+    <!--</TableRow>-->
+
+    <com.lankahardwared.lankahw.control.FinacBtn
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_button_bg"
+        android:text="OK"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:background="@drawable/rounded_bg"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<com.lankahardwared.lankahw.control.FinacFont-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:padding="15dp"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textAlignment="center"-->
+        <!--android:text="Download Summary" />-->
+
+    <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#dcdcdc"></View>-->
+
+    <!--<ListView-->
+        <!--android:id="@+id/downld_lv"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:divider="@android:color/transparent"-->
+        <!--android:dividerHeight="5dp"-->
+        <!--android:padding="5dip">-->
+
+    <!--</ListView>-->
+
+    <!--<com.lankahardwared.lankahw.control.FinacBtn-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/close"-->
+        <!--android:background="@drawable/bottom_button_bg"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textColor="#fff"-->
+        <!--android:text="OK" />-->
+
+
+<!--</LinearLayout>-->

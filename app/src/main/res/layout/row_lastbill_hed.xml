@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/return_hed_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/txtRefNoRow"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtTxnDateRow"
+        android:layout_alignBottom="@+id/txtTxnDateRow"
+        android:layout_alignParentStart="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        android:gravity="center"
+        android:text="RAA1704/0005"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtTxnDateRow"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="4/26/2017 12:00:00 AM"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_toRightOf="@+id/txtRefNoRow"
+        android:layout_toEndOf="@+id/txtRefNoRow"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txtDateRow"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="4/26/2017 12:00:00 AM"
+        android:gravity="center"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/txtTxnDateRow"
+        android:layout_toEndOf="@+id/txtTxnDateRow"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txtItemCodeRow"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="2308.50"
+        android:gravity="center"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/txtDateRow"
+        android:layout_toEndOf="@+id/txtDateRow"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txtQtyRow"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="DSS-THUSITH"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_toRightOf="@+id/txtItemCodeRow"
+        android:layout_toEndOf="@+id/txtItemCodeRow"
+        android:textSize="13sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/txtTotDisRow"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="0.00"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_toRightOf="@+id/txtQtyRow"
+        android:layout_toEndOf="@+id/txtQtyRow"
+        android:textSize="13sp"
+        android:gravity="center" />
+
+
+    <TextView
+        android:id="@+id/txtTotAmtRow"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="0.00"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_toRightOf="@+id/txtTotDisRow"
+        android:layout_toEndOf="@+id/txtTotDisRow"
+        android:textSize="13sp"
+        android:gravity="center" />
+
+
+
+</RelativeLayout>

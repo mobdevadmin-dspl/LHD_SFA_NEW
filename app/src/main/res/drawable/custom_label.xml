@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#40C4FF" />
+
+    <stroke
+        android:width="@dimen/finac_custom_textbox_stroke"
+        android:color="#2f6699" />
+
+    <corners
+        android:bottomLeftRadius="@dimen/finac_custom_textbox_corner"
+        android:bottomRightRadius="@dimen/finac_custom_textbox_corner"
+        android:topLeftRadius="@dimen/finac_custom_textbox_corner"
+        android:topRightRadius="@dimen/finac_custom_textbox_corner" />
+
+    <padding
+        android:bottom="@dimen/finac_custom_textbox_padding"
+        android:left="@dimen/finac_custom_textbox_padding"
+        android:right="@dimen/finac_custom_textbox_padding"
+        android:top="@dimen/finac_custom_textbox_padding" />
+
+</shape>

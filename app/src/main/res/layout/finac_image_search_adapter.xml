@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/img_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/tv_item_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_item_name"
+        android:textColor="@color/greenColor"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/TextView01"
+        android:text="TextView"
+        android:textSize="@dimen/font_size_intermed"
+        android:textStyle="bold" />
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greenColor"
+        android:text="Part_Description"
+        android:textSize="@dimen/font_size_small"
+        android:layout_below="@+id/tv_item_code"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/tv_item_QOH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qoh"
+        android:textSize="@dimen/font_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_item_name" />
+
+    >
+</RelativeLayout>

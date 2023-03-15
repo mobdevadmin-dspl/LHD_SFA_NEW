@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+<!--   <ScrollView -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="fill_parent" -->
+<!--         android:orientation="vertical" > -->
+   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/printtrans"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="Trans :"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/printindex"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.15"
+            android:text="1"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/printitemname"
+            android:layout_width="10.0dip"
+            android:layout_height="20dip"
+            android:layout_weight="4.30"
+            android:text="Item name"
+            android:textColor="#040d19"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/printindex1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="("
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/printdiscount"
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="4"
+            android:text="0"
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/transdoctextba"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="0.1"
+            android:text="("
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/transdoctextba11"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:text="CS"
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/transdoctextba44"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:text=":"
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/printcasesQty" -->
+        <!-- android:layout_width="0.0dip" -->
+        <!-- android:layout_height="fill_parent" -->
+        <!-- android:layout_weight="0.5" -->
+        <!-- android:hint="" -->
+        <!-- android:textColor="#040d19" -->
+        <!-- android:textStyle="bold" -->
+        <!-- android:visibility="gone" -->
+        <!-- /> -->
+
+        <TextView
+            android:id="@+id/transdoctextba33"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:text=","
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/transdoctextbc"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:text="PS"
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/transdoctextba22"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:text=":"
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/printcasesQty"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:hint=""
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/transdoctextba55"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:text=")"
+            android:textColor="#040d19"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/printunits"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="1.57"
+            android:hint="PS:"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/printpiecesQty"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.2"
+            android:hint="Qty"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/printunitprice"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.36"
+            android:gravity="left"
+            android:text="unit price"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/printamount"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.88"
+            android:gravity="right"
+            android:text="Amount"
+            android:textColor="#040d19"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+<!--     </ScrollView> -->
+</LinearLayout>

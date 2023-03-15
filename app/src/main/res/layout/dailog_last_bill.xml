@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_hed"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+       <!-- <TextView
+            android:id="@+id/header_reFNo"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="left"
+            android:text="REF NO"
+            android:textSize="16sp"
+            android:textColor="@color/blueColor"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDATE"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/header_reFNo"
+            android:layout_toRightOf="@+id/header_reFNo"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="TXN DATE"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_debcode"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtDATE"
+            android:layout_toRightOf="@+id/txtDATE"
+            android:gravity="center"
+            android:text="DEBTOR"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtitem_code"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txt_debcode"
+            android:layout_toRightOf="@+id/txt_debcode"
+            android:gravity="center"
+            android:text="ITEM CODE"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtQty"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtitem_code"
+            android:layout_toRightOf="@+id/txtitem_code"
+            android:gravity="center"
+            android:text="QTY"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/txtTotDis"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtQty"
+            android:layout_toRightOf="@+id/txtQty"
+            android:gravity="center"
+            android:text="QTY"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTotAmt"
+            android:layout_width="160dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txtTotDis"
+            android:layout_toRightOf="@+id/txtTotDis"
+            android:gravity="center"
+            android:text="QTY"
+            android:textColor="@color/blueColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />-->
+
+    </RelativeLayout>
+
+
+    <ExpandableListView
+        android:id="@+id/vanSales_history_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/list_view_diveder"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/rl_hed"/>
+
+</RelativeLayout>

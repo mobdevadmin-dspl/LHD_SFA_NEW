@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="500dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <com.lankahardwared.lankahw.control.FinacFont
+                android:id="@+id/debCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/blueColor"
+                android:textSize="@dimen/customer_listview_text_size1"
+                android:textStyle="bold" />
+
+            <com.lankahardwared.lankahw.control.FinacFont
+                android:id="@+id/debName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/list_background_pressed"
+                android:textSize="@dimen/customer_listview_text_size2"
+                android:textStyle="bold" />
+
+            <com.lankahardwared.lankahw.control.FinacFont
+                android:id="@+id/debAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/list_background_pressed"
+                android:textSize="@dimen/customer_listview_text_size2"
+                android:textStyle="italic" />
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:gravity="center">-->
+
+            <!--<Button-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:background="@drawable/info2"-->
+                <!--android:id="@+id/btn_info"/>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+
+</LinearLayout>

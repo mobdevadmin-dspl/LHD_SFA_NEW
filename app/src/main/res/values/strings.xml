@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LANKAHARDWARE</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Num Value -->
+    <string name="NumVal">PDASO</string>
+    <string name="VanNumVal">PDASI</string>
+    <string name="LodNumVal">STRLO</string>
+    <string name="NonProd">DAYNPSO</string>
+    <string name="UnLodNumVal">STRUN</string>
+    <string name="DamagNumVal">SDTRAN</string>
+    <string name="ExpenseNumVal">EXPR</string>
+    <string name="DispVal">PDADISP</string>
+    <string name="VanReturnNumVal">PDASR</string>
+    <string name="RecNumVal">PDARC</string>
+    <string name="newCusVal">PDAREG</string>
+    <!--receipt payment common ref number-->
+    <string name="RecNumValCom">PDARCM</string>
+    <!--PDA paymode cash-->
+    <string name="RecPayCash">PDAPCA</string>
+    <!--PDA paymode cheque-->
+    <string name="RecPayCheq">PDAPCH</string>
+    <!--PDA paymode credit card-->
+    <string name="RecPayCard">PDAPCR</string>
+    <string name="DepoNumVal">PDADEPO</string>
+    <!-- Download & SQLIte Back Data -->
+<!--    <string name="ConnectionURL">/DelTexWebServices/DelTexWebServicesRest.svc</string>-->
+    <!--<string name="ConnectionURL">/mFinacWebServices/mFinacWebServicesRest.svc</string>-->
+    <!--<string name="ConnectionURL">/LHD_PDA_TEST/LankaHDWebServicesRest.svc</string>-->
+    <string name="ConnectionURL">/LankaHDWebServicesNew/LankaHDWebServicesRest.svc</string>
+    <string name="baseURL">203.143.21.121:8080</string>
+    <string name="DATABASE_NAME">lankahw_database.db</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <!-- Print Preview Descrption -->
+    <string name="head_comp_name">Company Name</string>
+    <string name="head_address1">Company Address1,</string>
+    <string name="head_address2">Company Address2</string>
+    <string name="head_comp_tele">Telephone</string>
+    <string name="head_comp_website">web site</string>
+    <string name="head_comp_email">email</string>
+    <string name="printheadingline">-------------------------------------------------------------------------------------------------</string>
+    <string name="head_distributor">Distributor</string>
+    <string name="head_dist_address1">Address1</string>
+    <string name="head_dist_address2">Address2</string>
+    <string name="head_dist_phone">Phone #</string>
+    <string name="head_repname">Rep Name</string>
+    <string name="head_cuscode">Customer Code</string>
+    <string name="head_cusname">Customer Name</string>
+    <string name="head_sal_ord_date">Sales Order Date</string>
+    <string name="head_sal_delv_date">Delivery Date</string>
+    <string name="head_sal_refno">Order Number</string>
+    <string name="head_sal_remarks">Remarks</string>
+    <string name="trans_detail_Product_name">Product Name</string>
+    <string name="trans_detail_Product_Discount">Disc</string>
+    <string name="trans_detail_Product_CSPC">(CS/PS)</string>
+    <string name="trans_detail_Product_Units">Units</string>
+    <string name="trans_detail_Product_UnitPrice">UnitPrice</string>
+    <string name="trans_detail_Product_Price">Amount</string>
+    <string name="trans_summary_total_qty">Total Quantity</string>
+    <string name="trans_summary_total_value">Total Value</string>
+    <string name="trans_summary_total_mkt_ret">Total Market Return</string>
+    <string name="trans_summary_header_disc">Header Discount</string>
+    <string name="trans_summary_line_disc">Line Discount</string>
+    <string name="trans_summary_total_disc">Total Discount</string>
+    <string name="trans_summary_net_value">Net Total</string>
+    <string name="trans_summary_caseqty">Cases</string>
+    <string name="trans_summary_pieceqty">Pieces</string>
+    <string name="trans_summary_previewvalue">0000</string>
+
+    <!-- Print Preview Loading Descrption -->
+    <string name="refno">RefNo</string>
+    <string name="date">Date</string>
+
+    <!-- Print Preview Van Sale Invoice -->
+    <string name="head_van_sal_date">Invoice Date</string>
+    <string name="add_geofences_result_success">GeoFencing success</string>
+    <string name="add_geofences_result_failure">GeoFencing failed</string>
+    <string name="remove_geofences_intent_success">GeoFencing removed</string>
+    <string name="remove_geofences_intent_failure">GeoFencing not removed</string>
+    <string name="geofence_transition_notification_title">GeoFencing App</string>
+    <string name="geofence_transition_notification_text">GeoFencing transition detected </string>
+    <string name="geofence_transition_entered">GeoFence Entered</string>
+    <string name="geofence_transition_exited">GeoFence Exited</string>
+    <string name="geofence_transition_unknown">GeoFence unknown</string>
+
+    <string name="Customer_Registrtion">Customer Registration</string>
+    <string name="compulsory">*</string>
+
+</resources>

@@ -1,0 +1,19 @@
+com.oguzdev.circularfloatingactionmenu.library
+dimen action_button_content_margin
+dimen action_button_margin
+dimen action_button_size
+dimen action_menu_radius
+dimen sub_action_button_content_margin
+dimen sub_action_button_size
+drawable button_action
+drawable button_action_dark
+drawable button_action_dark_selector
+drawable button_action_dark_touch
+drawable button_action_selector
+drawable button_action_touch
+drawable button_sub_action
+drawable button_sub_action_dark
+drawable button_sub_action_dark_selector
+drawable button_sub_action_dark_touch
+drawable button_sub_action_selector
+drawable button_sub_action_touch

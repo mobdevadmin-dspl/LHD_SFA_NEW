@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_ly"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+
+    <com.lankahardwared.lankahw.control.FinacFont
+        android:id="@+id/txtItemNameRow"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="ANTALU001L"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="14dp"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:gravity="left" />
+    <TextView
+        android:id="@+id/txtItemQtyRow"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_toRightOf="@+id/txtItemNameRow"
+        android:layout_toEndOf="@+id/txtItemNameRow"
+        android:textSize="13sp" />
+    <TextView
+        android:id="@+id/txtfreeqtyRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:gravity="left"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_toRightOf="@+id/txtItemQtyRow"
+        android:layout_toEndOf="@+id/txtItemQtyRow"
+        android:textSize="13sp" />
+
+</RelativeLayout>

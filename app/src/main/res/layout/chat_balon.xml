@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Chatbaloon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_name_bg"
+        android:gravity="left"
+        android:padding="3dp"
+        android:text="user"
+        android:textColor="#fff"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_bg_get"
+        android:padding="10dp"
+        android:text="msg"
+        android:textColor="#000"
+        android:textSize="18sp" />
+</LinearLayout>
