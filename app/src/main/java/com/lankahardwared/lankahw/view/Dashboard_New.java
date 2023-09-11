@@ -79,10 +79,9 @@ public class Dashboard_New extends Fragment {
         tvTarget = (TextView) rootView.findViewById(R.id.fragment_day_summary_card_tv_target_value);
         tvAchieve = (TextView) rootView.findViewById(R.id.dashboard_tv_card_today_Achieve_calls);
 
-
         tvTMGross = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_gross_sale);
         tvTMNet = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_net_sale);
-        tvTMReturn = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_return);
+        tvTMReturn = (TextView) rootView.findViewById(R.id.textVidashboard_tv_card_this_month_return);
         tvTMDiscount = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_discount);
         tvTMProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_productive_calls);
         tvTMNonProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_unproductive_calls);
@@ -90,83 +89,28 @@ public class Dashboard_New extends Fragment {
         tvTMTarget = (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_target_value);
         tvTMAchieve= (TextView) rootView.findViewById(R.id.dashboard_tv_card_this_month_Achievement_calls);
 
+        tvPMGross = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_gross_sale);
+        tvPMNet = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_net_sale);
+        tvPMReturn = (TextView) rootView.findViewById(R.id.textVidashboard_tv_card_previous_month_return);
+        tvPMDiscount = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_discount);
+        tvPMProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_productive_calls);
+        tvPMNonProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_unproductive_calls);
+        tvPMinvoicesale = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_invoice_sale_value);
+        tvPMTarget = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_target_value);
 
-        tvPMGross = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_gross_sale);
-        tvPMNet = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_net_sale);
-        tvPMReturn = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_return_value);
-        tvPMDiscount = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_discount);
-        tvPMProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_productive_calls);
-        tvPMNonProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_unproductive_calls);
-        tvPMinvoicesale = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_invoicesale_value);
-        tvPMTarget = (TextView) rootView.findViewById(R.id.dashboard_tv_card_prev_month_target_value);
-
-
-        double dailyGross = new DashboardNewDS(getActivity()).getDailyGross();
         double dailyAchieve = new DashboardNewDS(getActivity()).getDailyAchieve();
         double dailyTarget = new DashboardNewDS(getActivity()).getRepTarget() / 30 ;
-        double dailyDiscount = new DashboardNewDS(getActivity()).getDiscount();
-        double dailyReturn = new DashboardNewDS(getActivity()).getTodayReturn();
-
-        int nonprd = new DashboardNewDS(getActivity()).getNonProductiveCount();
-        int ordcount = new DashboardNewDS(getActivity()).getProductivecount();
-
-        double thisMonthDiscount = new DashboardNewDS(getActivity()).getTMDiscount();
-        double preMonthDiscount = new DashboardNewDS(getActivity()).getPMDiscount();
-
-        int tMordcount = new DashboardNewDS(getActivity()).getTMProductivecount();
-        int pMordcount = new DashboardNewDS(getActivity()).getPMProductivecount();
-
-        int tMNpcount = new DashboardNewDS(getActivity()).getTMNonProductiveCount();
-        int pMNpcount = new DashboardNewDS(getActivity()).getPMNonProductiveCount();
-
-        double thisMonthReturn  = new DashboardNewDS(getActivity()).getTMReturn();
-        double preMonthReturn   = new DashboardNewDS(getActivity()).getPMReturn();
-
-       double thisMonthAchieve = new DashboardNewDS(getActivity()).getTMAchieve();
-
-        double thisMonthGross= new DashboardNewDS(getActivity()).getTMGross();
-        double preMonthAchieve  = new DashboardNewDS(getActivity()).getpPMAchieve();
-
-        double thisMonthTGross = (thisMonthGross + thisMonthDiscount);
-        double preMonthGross  = (preMonthAchieve + preMonthDiscount);
-
-        double thisMonthInvoiceSale = Double.parseDouble(SharedPref.getInstance(getActivity()).getInvoiceSaleTM());
-       // double thisMonthInvoiceSale = new DashboardNewDS(getActivity()).getTMInvoiceSale();
-       // double preMonthInvoiceSale = new DashboardNewDS(getActivity()).getPMInvoiceSale();
-       double preMonthInvoiceSale = Double.parseDouble(SharedPref.getInstance(getActivity()).getInvoiceSalePM());
-
-       double thisMonthTarget = new DashboardNewDS(getActivity()).getRepTarget();
+        double thisMonthAchieve = new DashboardNewDS(getActivity()).getTMAchieve();
+        double thisMonthTarget = new DashboardNewDS(getActivity()).getRepTarget();
         double preMonthTarget = new DashboardNewDS(getActivity()).getPMRepTarget();
 
-        tvTMGross.setText(""+format.format(thisMonthTGross));
-        tvTMNet.setText("" + format.format(thisMonthTGross - thisMonthDiscount + thisMonthReturn));
-        tvTMReturn.setText(""+format.format(thisMonthReturn));
-        tvTMDiscount.setText("" + format.format(thisMonthDiscount));
-        tvTMinvoicesale.setText("" +format.format(thisMonthInvoiceSale));
-        tvTMProductive.setText("" + tMordcount);
-        tvTMNonProductive.setText("" + tMNpcount);
         tvTMTarget.setText("" + format.format(thisMonthTarget));
         tvTMAchieve.setText("" + format.format(thisMonthAchieve));
-
-
-        tvPMGross.setText(""+format.format(preMonthGross));
-        tvPMNet.setText("" + format.format(preMonthGross - preMonthDiscount + preMonthReturn));
-        tvPMReturn.setText(""+format.format(preMonthReturn));
-        tvPMDiscount.setText("" + format.format(preMonthDiscount));
-        tvPMinvoicesale.setText("" +format.format(preMonthInvoiceSale));
-        tvPMProductive.setText("" + pMordcount);
-        tvPMNonProductive.setText("" + pMNpcount);
         tvPMTarget.setText("" + format.format(preMonthTarget));
-
-        tvSalesGross.setText("" + format.format(dailyGross+dailyDiscount));
         tvAchieve.setText("" + format.format(dailyAchieve));
-        tvNetValue.setText("" + format.format(dailyGross-dailyDiscount+dailyReturn));
-        tvReturn.setText("" + format.format(dailyReturn));
-        tvDiscount.setText("" + format.format(dailyDiscount));
-        tvinvoicesale.setText("" +format.format(dailyGross));
-        tvProductive.setText("" + ordcount);
-        tvNonprdctive.setText("" + nonprd);
         tvTarget.setText("" + format.format(dailyTarget));
+
+       setCurrentMonthFigures();
 
         return rootView;
     }
@@ -190,6 +134,63 @@ public class Dashboard_New extends Fragment {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void setCurrentMonthFigures()
+    {
+        double thisMonthDiscount = Double.parseDouble(pref.getTransOrdDiscSumTM());
+        double thisMonthGross= Double.parseDouble(pref.getTransOrdSumTM());
+        double thisMonthReturn = Double.parseDouble(pref.getMonthReturnSumTM());
+        double thisMonthTGross = (thisMonthGross + thisMonthDiscount);
+        double thisMonthInvoiceSale = Double.parseDouble(pref.getInvoiceSaleTM());
+        int thisMonthProductive = Integer.parseInt(pref.getMonthProdSumTM());
+        int thisMonthNonProd = Integer.parseInt(pref.getMonthNonProdSumTM());
+
+        tvTMGross.setText(""+format.format(thisMonthTGross));
+        tvTMDiscount.setText("" + format.format(thisMonthDiscount));
+        tvTMNet.setText("" + format.format(thisMonthTGross + thisMonthDiscount - thisMonthReturn));
+        tvTMReturn.setText(""+format.format(thisMonthReturn));
+        tvTMinvoicesale.setText("" +format.format(thisMonthInvoiceSale));
+        tvTMProductive.setText("" + format.format(thisMonthProductive));
+        tvTMNonProductive.setText("" + format.format(thisMonthNonProd));
+
+        setPreviousMonthFigures();
+    }
+
+    private void setPreviousMonthFigures()
+    {
+        double preMonthDiscount = Double.parseDouble(pref.getTransOrdDiscSumPM());
+        double preMonthGross= Double.parseDouble(pref.getTransOrdSumPM());
+        double preMonthReturn = Double.parseDouble(pref.getMonthReturnSumPM());
+        double previousMonthTGross = (preMonthGross + preMonthDiscount);
+        double preMonthInvoiceSale = Double.parseDouble(pref.getInvoiceSalePM());
+        int prevMonthProductive = Integer.parseInt(pref.getMonthProdSumPM());
+        int prevMonthNonProd = Integer.parseInt(pref.getMonthNonProdSumPM());
+
+        tvPMGross.setText(""+format.format(previousMonthTGross));
+        tvPMDiscount.setText("" + format.format(preMonthDiscount));
+        tvPMNet.setText("" + format.format(preMonthGross + preMonthDiscount - preMonthReturn));
+        tvPMReturn.setText(""+format.format(preMonthReturn));
+        tvPMinvoicesale.setText("" +format.format(preMonthInvoiceSale));
+        tvPMProductive.setText("" + format.format(prevMonthProductive));
+        tvPMNonProductive.setText("" + format.format(prevMonthNonProd));
+
+        setDailyFigures();
+    }
+
+    private void setDailyFigures()
+    {
+        Double ordSum = Double.parseDouble(pref.getDayOrderSum());
+        Double disSum = Double.parseDouble(pref.getDayDiscountSum());
+        Double retSum = Double.parseDouble(pref.getDayReturnSum());
+
+        tvSalesGross.setText(""+format.format( ordSum + disSum));
+        tvDiscount.setText(""+format.format(Double.parseDouble(pref.getDayDiscountSum())));
+        tvReturn.setText(""+format.format(Double.parseDouble(pref.getDayReturnSum())));
+        tvProductive.setText(""+format.format(Double.parseDouble(pref.getDayProdSum())));
+        tvNonprdctive.setText(""+format.format(Double.parseDouble(pref.getDayNonProdSum())));
+        tvinvoicesale.setText(""+format.format(Double.parseDouble(pref.getDayInvoiceSum())));
+        tvNetValue.setText(""+format.format(ordSum + disSum - retSum));
     }
 }
 

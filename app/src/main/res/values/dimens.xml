@@ -18,5 +18,8 @@
     <dimen name="font_for_heading">18sp</dimen>
     <dimen name="font_for_heddebname">20sp</dimen>
 
+    <dimen name="medium_margin">2dp</dimen>
+    <dimen name="small_margin">2dp</dimen>
+
 
 </resources>

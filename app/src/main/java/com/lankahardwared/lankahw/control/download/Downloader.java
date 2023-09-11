@@ -1,12 +1,9 @@
 package com.lankahardwared.lankahw.control.download;
 
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.view.WindowManager;
 
 import com.lankahardwared.lankahw.control.SharedPref;
 import com.lankahardwared.lankahw.control.TaskType;
@@ -125,7 +122,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.List;
 
 //import com.datamation.finacnew.data.fDistrictDS;
 //import com.datamation.finacnew.model.fDistrict;
@@ -2416,6 +2412,118 @@ public class Downloader extends AsyncTask<Void, Integer, String> {
                     }
                     new AchievementDS(context).createOrUpdateAcieve(list);
                     new ControlDS(context).createOrUpdateDownload("" + list.size(), "" + totalRecords, "Achievement Info");
+                }
+                break;
+
+                case MONTHORDERSUM:
+                {
+                    String orderSumTM = jsonResponse.getString("monOrdTotResult");
+                    SharedPref.getInstance(context).setTransOrdSumTM(orderSumTM);
+                }
+                break;
+
+                case MONTHORDERDISCSUM:
+                {
+                    String orderDiscSumTM = jsonResponse.getString("monOrdDisTotResult");
+                    SharedPref.getInstance(context).setTransOrdDiscSumTM(orderDiscSumTM);
+                }
+                break;
+
+                case MONTHORDERSUMPM:
+                {
+                    String orderSumPM = jsonResponse.getString("monOrdTotResult");
+                    SharedPref.getInstance(context).setTransOrdSumPM(orderSumPM);
+                }
+                break;
+
+                case MONTHORDERDISCSUMPM:
+                {
+                    String orderDiscSumPM = jsonResponse.getString("monOrdDisTotResult");
+                    SharedPref.getInstance(context).setTransOrdDiscSumPM(orderDiscSumPM);
+                }
+                break;
+
+                case DAYORDERSUM:
+                {
+                    String dayOrdTot = jsonResponse.getString("dayOrdTotResult");
+                    SharedPref.getInstance(context).setDayOrderSum(dayOrdTot);
+                }
+                break;
+
+                case DAYDISCOUNTSSUM:
+                {
+                    String dayOrdDisTot = jsonResponse.getString("dayOrdDisTotResult");
+                    SharedPref.getInstance(context).setDayDiscountSum(dayOrdDisTot);
+                }
+                break;
+
+                case DAYRETURNSUM:
+                {
+                    String dayRtnTot = jsonResponse.getString("dayRtnTotResult");
+                    SharedPref.getInstance(context).setDayReturnSum(dayRtnTot);
+                }
+                break;
+
+                case DAYPRODUCTIVESUM:
+                {
+                    String dayProd = jsonResponse.getString("dayProdResult");
+                    SharedPref.getInstance(context).setDayProdSum(dayProd);
+                }
+                break;
+
+                case DAYNONPRODUCTIVESUM:
+                {
+                    String dayNonProd = jsonResponse.getString("dayNonProdResult");
+                    SharedPref.getInstance(context).setDayNonProdSum(dayNonProd);
+                }
+                break;
+
+                case DAYINVOICESUM:
+                {
+                    String dayInvSale = jsonResponse.getString("dayInvSaleResult");
+                    SharedPref.getInstance(context).setDayInvoiceSum(dayInvSale);
+                }
+                break;
+
+                case MONTHRETURNSUMTM:
+                {
+                    String monRtnTotTM = jsonResponse.getString("monRtnTotResult");
+                    SharedPref.getInstance(context).setMonthReturnSumTM(monRtnTotTM);
+                }
+                break;
+
+                case MONTHRETURNSUMPM:
+                {
+                    String monRtnTotPM = jsonResponse.getString("monRtnTotResult");
+                    SharedPref.getInstance(context).setMonthReturnSumPM(monRtnTotPM);
+                }
+                break;
+
+                case MONTHPRODSUMTM:
+                {
+                    String monProdTm = jsonResponse.getString("monProdResult");
+                    SharedPref.getInstance(context).setMonthProdSumTM(monProdTm);
+                }
+                break;
+
+                case MONTHPRODSUMPM:
+                {
+                    String monProdPm = jsonResponse.getString("monProdResult");
+                    SharedPref.getInstance(context).setMonthProdSumPM(monProdPm);
+                }
+                break;
+
+                case MONTHNONPROSUMTM:
+                {
+                    String monNonProdTM = jsonResponse.getString("monNonProdResult");
+                    SharedPref.getInstance(context).setMonthNonProdSumTM(monNonProdTM);
+                }
+                break;
+
+                case MONTHNONPROSUMPM:
+                {
+                    String monNonProdPM = jsonResponse.getString("monNonProdResult");
+                    SharedPref.getInstance(context).setMonthNonProdSumPM(monNonProdPM);
                 }
                 break;
 

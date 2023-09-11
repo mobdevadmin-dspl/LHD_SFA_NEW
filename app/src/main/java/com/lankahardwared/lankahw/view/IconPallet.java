@@ -772,6 +772,12 @@ public class IconPallet extends Fragment implements View.OnClickListener, Downlo
        String URL = "http://" + localSP.getString("URL", "").toString();
        SalRepDS salRepDS = new SalRepDS(getActivity());
 
+        int iYear = Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()));
+        int iMonth = Integer.parseInt(new SimpleDateFormat("MM").format(new Date()));
+
+        String thisM = "/"+String.valueOf(iYear) + "/" + String.valueOf(iMonth);
+        String previousM = "/"+String.valueOf(iYear) + "/" + String.valueOf(iMonth-1);
+
         switch (taskType) {
 
             case FSALREP:
@@ -1119,6 +1125,102 @@ public class IconPallet extends Fragment implements View.OnClickListener, Downlo
                 break;
 
             case FOTHERTRANS:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHORDERSUM, URL, setOrderEndPoint(thisM)).execute();
+
+                break;
+
+            case MONTHORDERSUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHORDERDISCSUM, URL, setOrderDiscEndPoint(thisM)).execute();
+
+                break;
+
+            case MONTHORDERDISCSUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHORDERSUMPM, URL, setOrderEndPoint(previousM)).execute();
+
+                break;
+
+            case MONTHORDERSUMPM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.DAYORDERSUM, URL, setDayOrderTotEndPoint()).execute();
+
+                break;
+
+            case DAYORDERSUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.DAYDISCOUNTSSUM, URL, setDayDiscountTotEndPoint()).execute();
+
+                break;
+
+            case DAYDISCOUNTSSUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.DAYRETURNSUM, URL, setDayReturnTotEndPoint()).execute();
+
+                break;
+
+            case DAYRETURNSUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.DAYPRODUCTIVESUM, URL, setDayProductiveTotEndPoint()).execute();
+
+                break;
+
+            case DAYPRODUCTIVESUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.DAYNONPRODUCTIVESUM, URL, setDayNonProductiveTotEndPoint()).execute();
+
+                break;
+
+            case DAYNONPRODUCTIVESUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.DAYINVOICESUM, URL, setDayInvoiceTotEndPoint()).execute();
+
+                break;
+
+            case DAYINVOICESUM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHRETURNSUMTM, URL, setMonthReturnEndPoint(thisM)).execute();
+
+                break;
+
+            case MONTHRETURNSUMTM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHRETURNSUMPM, URL, setMonthReturnEndPoint(previousM)).execute();
+
+                break;
+
+            case MONTHRETURNSUMPM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHPRODSUMTM, URL, setMonthProdEndPoint(thisM)).execute();
+
+                break;
+
+            case MONTHPRODSUMTM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHPRODSUMPM, URL, setMonthProdEndPoint(previousM)).execute();
+
+                break;
+
+            case MONTHPRODSUMPM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHNONPROSUMTM, URL, setMonthNonProdEndPoint(thisM)).execute();
+
+                break;
+
+            case MONTHNONPROSUMTM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHNONPROSUMPM, URL, setMonthNonProdEndPoint(previousM)).execute();
+
+                break;
+
+            case MONTHNONPROSUMPM:
+
+                new Downloader(getActivity(), IconPallet.this, TaskType.MONTHORDERDISCSUMPM, URL, setOrderDiscEndPoint(previousM)).execute();
+
+                break;
+
+            case MONTHORDERDISCSUMPM:
 
                 SharedPreferencesClass.setLocalSharedPreference(getActivity(), "Sync_Status", "Success");
 
@@ -1952,5 +2054,93 @@ public class IconPallet extends Fragment implements View.OnClickListener, Downlo
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
         }
+    }
+
+    private String setOrderDiscEndPoint(String date)
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String transorddiscsum = connURLsvc + "/monOrdDisTot/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode()+ date;
+
+        return transorddiscsum;
+    }
+
+    private String setOrderEndPoint(String date)
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String transordsum = connURLsvc + "/monOrdTot/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode()+ date;
+
+        return transordsum;
+    }
+
+    private String setDayOrderTotEndPoint()
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String dayOrdTot = connURLsvc + "/dayOrdTot/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode();
+
+        return dayOrdTot;
+    }
+
+    private String setDayDiscountTotEndPoint()
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String dayOrdDisTot = connURLsvc + "/dayOrdDisTot/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode();
+
+        return dayOrdDisTot;
+    }
+
+    private String setDayReturnTotEndPoint()
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String dayRtnTot = connURLsvc + "/dayRtnTot/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode();
+
+        return dayRtnTot;
+    }
+
+    private String setDayProductiveTotEndPoint()
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String dayProd = connURLsvc + "/dayProd/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode();
+
+        return dayProd;
+    }
+
+    private String setDayNonProductiveTotEndPoint()
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String dayNonProd = connURLsvc + "/dayNonProd/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode();
+
+        return dayNonProd;
+    }
+
+    private String setDayInvoiceTotEndPoint()
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String dayInvSale = connURLsvc + "/dayInvSale/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode();
+
+        return dayInvSale;
+    }
+
+    private String setMonthReturnEndPoint(String date)
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String monRtnTot = connURLsvc + "/monRtnTot/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode()+ date;
+
+        return monRtnTot;
+    }
+
+    private String setMonthProdEndPoint(String date)
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String monProd = connURLsvc + "/monProd/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode()+ date;
+
+        return monProd;
+    }
+
+    private String setMonthNonProdEndPoint(String date)
+    {
+        SalRepDS salRepDS = new SalRepDS(getActivity());
+        String monNonProd = connURLsvc + "/monNonProd/mobile123/" + localSP.getString("Console_DB", "").toString()+"/"+ salRepDS.getCurrentRepCode()+ date;
+
+        return monNonProd;
     }
 }
