@@ -131,5 +131,200 @@ public class SharedPref {
         editor.putBoolean("validate_status", status).apply();
     }
 
+    public void setTransOrdSumTM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("TransOrdSumTM", value);
+        editor.apply();
+    }
+
+    public String getTransOrdSumTM() {
+
+        return prefs.getString("TransOrdSumTM", "0.0");
+
+    }
+
+    public void setTransOrdDiscSumTM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("TransOrdDiscSumTM", value);
+        editor.apply();
+    }
+
+    public String getTransOrdDiscSumTM() {
+
+        return prefs.getString("TransOrdDiscSumTM", "0.0");
+
+    }
+
+    public void setTransOrdSumPM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("TransOrdSumPM", value);
+        editor.apply();
+    }
+
+    public String getTransOrdSumPM() {
+
+        return prefs.getString("TransOrdSumPM", "0.0");
+
+    }
+
+    public void setTransOrdDiscSumPM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("TransOrdDiscSumPM", value);
+        editor.apply();
+    }
+
+    public String getTransOrdDiscSumPM() {
+
+        return prefs.getString("TransOrdDiscSumPM", "0.0");
+
+    }
+
+    public void setDayOrderSum(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("DayOrderSum", value);
+        editor.apply();
+    }
+
+    public String getDayOrderSum() {
+
+        return prefs.getString("DayOrderSum", "0.0");
+
+    }
+
+    public void setDayDiscountSum(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("DayDiscountSum", value);
+        editor.apply();
+    }
+
+    public String getDayDiscountSum() {
+
+        return prefs.getString("DayDiscountSum", "0.0");
+
+    }
+
+    public void setDayReturnSum(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("DayReturnSum", value);
+        editor.apply();
+    }
+
+    public String getDayReturnSum() {
+
+        return prefs.getString("DayReturnSum", "0.0");
+
+    }
+
+    public void setDayProdSum(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("DayProdSum", value);
+        editor.apply();
+    }
+
+    public String getDayProdSum() {
+
+        return prefs.getString("DayProdSum", "0.0");
+
+    }
+
+    public void setDayNonProdSum(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("DayNonProdSum", value);
+        editor.apply();
+    }
+
+    public String getDayNonProdSum() {
+
+        return prefs.getString("DayNonProdSum", "0.0");
+
+    }
+
+    public void setDayInvoiceSum(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("DayInvoiceSum", value);
+        editor.apply();
+    }
+
+    public String getDayInvoiceSum() {
+
+        return prefs.getString("DayInvoiceSum", "0.0");
+
+    }
+
+    public void setMonthReturnSumPM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MonthReturnSumPM", value);
+        editor.apply();
+    }
+
+    public String getMonthReturnSumPM() {
+
+        return prefs.getString("MonthReturnSumPM", "0.0");
+
+    }
+
+    public void setMonthReturnSumTM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MonthReturnSumTM", value);
+        editor.apply();
+    }
+
+    public String getMonthReturnSumTM() {
+
+        return prefs.getString("MonthReturnSumTM", "0.0");
+
+    }
+
+
+
+
+    public void setMonthProdSumTM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MonthProdSumTM", value);
+        editor.apply();
+    }
+
+    public String getMonthProdSumTM() {
+
+        return prefs.getString("MonthProdSumTM", "0.0");
+
+    }
+
+    public void setMonthProdSumPM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MonthProdSumPM", value);
+        editor.apply();
+    }
+
+    public String getMonthProdSumPM() {
+
+        return prefs.getString("MonthProdSumPM", "0.0");
+
+    }
+
+    public void setMonthNonProdSumTM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MonthNonProdSumTM", value);
+        editor.apply();
+    }
+
+    public String getMonthNonProdSumTM() {
+
+        return prefs.getString("MonthNonProdSumTM", "0.0");
+
+    }
+
+    public void setMonthNonProdSumPM(String value) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("MonthNonProdSumPM", value);
+        editor.apply();
+    }
+
+    public String getMonthNonProdSumPM() {
+
+        return prefs.getString("MonthNonProdSumPM", "0.0");
+
+    }
+
 
 }
