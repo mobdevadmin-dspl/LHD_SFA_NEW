@@ -4,6 +4,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,9 +20,14 @@ import com.lankahardwared.lankahw.control.SharedPref;
 import com.lankahardwared.lankahw.control.UtilityContainer;
 import com.lankahardwared.lankahw.data.DashboardNewDS;
 
+import java.text.DateFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -58,14 +65,12 @@ public class Dashboard_New extends Fragment {
         format.setMaximumFractionDigits(0);
 
         tvDate = (TextView) rootView.findViewById(R.id.fragment_day_summary_select_date);
-//        toolbar = (Toolbar) rootView.findViewById(R.id.dashbard_toolbar);
-//        back = (ImageView) rootView.findViewById(R.id.back);
 
-       Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
-       ((MainActivity) getActivity()).setSupportActionBar(toolbar);
-       getActivity().setTitle("Dashboard");
-       toolbar.setLogo(R.drawable.dm_logo_64);
-       setHasOptionsMenu(true);
+        Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
+        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
+        getActivity().setTitle("Dashboard");
+        toolbar.setLogo(R.drawable.dm_logo_64);
+        setHasOptionsMenu(true);
 
         tvDate.setText(dateFormat.format(new Date(timeInMillis)));
 
@@ -98,18 +103,6 @@ public class Dashboard_New extends Fragment {
         tvPMinvoicesale = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_invoice_sale_value);
         tvPMTarget = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_target_value);
 
-        double dailyAchieve = new DashboardNewDS(getActivity()).getDailyAchieve();
-        double dailyTarget = new DashboardNewDS(getActivity()).getRepTarget() / 30 ;
-        double thisMonthAchieve = new DashboardNewDS(getActivity()).getTMAchieve();
-        double thisMonthTarget = new DashboardNewDS(getActivity()).getRepTarget();
-        double preMonthTarget = new DashboardNewDS(getActivity()).getPMRepTarget();
-
-        tvTMTarget.setText("" + format.format(thisMonthTarget));
-        tvTMAchieve.setText("" + format.format(thisMonthAchieve));
-        tvPMTarget.setText("" + format.format(preMonthTarget));
-        tvAchieve.setText("" + format.format(dailyAchieve));
-        tvTarget.setText("" + format.format(dailyTarget));
-
        setCurrentMonthFigures();
 
         return rootView;
@@ -138,13 +131,13 @@ public class Dashboard_New extends Fragment {
 
     private void setCurrentMonthFigures()
     {
-        double thisMonthDiscount = Double.parseDouble(pref.getTransOrdDiscSumTM());
-        double thisMonthGross= Double.parseDouble(pref.getTransOrdSumTM());
-        double thisMonthReturn = Double.parseDouble(pref.getMonthReturnSumTM());
+        double thisMonthDiscount = pref.getTransOrdDiscSumTM() != null ? Double.parseDouble(pref.getTransOrdDiscSumTM()) : 0.0;
+        double thisMonthGross= pref.getTransOrdSumTM() != null ? Double.parseDouble(pref.getTransOrdSumTM()) : 0.0;
+        double thisMonthReturn = pref.getMonthReturnSumTM() != null ? Double.parseDouble(pref.getMonthReturnSumTM()) : 0.0;
         double thisMonthTGross = (thisMonthGross + thisMonthDiscount);
-        double thisMonthInvoiceSale = Double.parseDouble(pref.getInvoiceSaleTM());
-        int thisMonthProductive = Integer.parseInt(pref.getMonthProdSumTM());
-        int thisMonthNonProd = Integer.parseInt(pref.getMonthNonProdSumTM());
+        double thisMonthInvoiceSale = pref.getInvoiceSaleTM() != null ? Double.parseDouble(pref.getInvoiceSaleTM()) : 0.0;
+        double thisMonthProductive = pref.getMonthProdSumTM() != null ? Double.parseDouble(pref.getMonthProdSumTM()) : 0.0;
+        double thisMonthNonProd = pref.getMonthNonProdSumTM() != null ? Double.parseDouble(pref.getMonthNonProdSumTM()) : 0.0;
 
         tvTMGross.setText(""+format.format(thisMonthTGross));
         tvTMDiscount.setText("" + format.format(thisMonthDiscount));
@@ -159,13 +152,13 @@ public class Dashboard_New extends Fragment {
 
     private void setPreviousMonthFigures()
     {
-        double preMonthDiscount = Double.parseDouble(pref.getTransOrdDiscSumPM());
-        double preMonthGross= Double.parseDouble(pref.getTransOrdSumPM());
-        double preMonthReturn = Double.parseDouble(pref.getMonthReturnSumPM());
+        double preMonthDiscount = pref.getTransOrdDiscSumPM() != null ? Double.parseDouble(pref.getTransOrdDiscSumPM()) : 0.0;
+        double preMonthGross= pref.getTransOrdSumPM() != null ? Double.parseDouble(pref.getTransOrdSumPM()) : 0.0;
+        double preMonthReturn = pref.getMonthReturnSumPM() != null ? Double.parseDouble(pref.getMonthReturnSumPM()) : 0.0;
         double previousMonthTGross = (preMonthGross + preMonthDiscount);
-        double preMonthInvoiceSale = Double.parseDouble(pref.getInvoiceSalePM());
-        int prevMonthProductive = Integer.parseInt(pref.getMonthProdSumPM());
-        int prevMonthNonProd = Integer.parseInt(pref.getMonthNonProdSumPM());
+        double preMonthInvoiceSale = pref.getInvoiceSalePM() != null ? Double.parseDouble(pref.getInvoiceSalePM()) : 0.0;
+        double prevMonthProductive = pref.getMonthProdSumPM() != null ? Double.parseDouble(pref.getMonthProdSumPM()) : 0.0;
+        double prevMonthNonProd = pref.getMonthNonProdSumPM() != null ? Double.parseDouble(pref.getMonthNonProdSumPM()) : 0.0;
 
         tvPMGross.setText(""+format.format(previousMonthTGross));
         tvPMDiscount.setText("" + format.format(preMonthDiscount));
@@ -180,9 +173,9 @@ public class Dashboard_New extends Fragment {
 
     private void setDailyFigures()
     {
-        Double ordSum = Double.parseDouble(pref.getDayOrderSum());
-        Double disSum = Double.parseDouble(pref.getDayDiscountSum());
-        Double retSum = Double.parseDouble(pref.getDayReturnSum());
+        double ordSum = pref.getDayOrderSum() != null ? Double.parseDouble(pref.getDayOrderSum()) : 0.0;
+        double disSum = pref.getDayDiscountSum() != null ? Double.parseDouble(pref.getDayDiscountSum()) : 0.0;
+        double retSum = pref.getDayReturnSum() != null ? Double.parseDouble(pref.getDayReturnSum()) : 0.0;
 
         tvSalesGross.setText(""+format.format( ordSum + disSum));
         tvDiscount.setText(""+format.format(Double.parseDouble(pref.getDayDiscountSum())));
@@ -191,6 +184,23 @@ public class Dashboard_New extends Fragment {
         tvNonprdctive.setText(""+format.format(Double.parseDouble(pref.getDayNonProdSum())));
         tvinvoicesale.setText(""+format.format(Double.parseDouble(pref.getDayInvoiceSum())));
         tvNetValue.setText(""+format.format(ordSum + disSum - retSum));
+
+        notConfirmedData();
+    }
+
+    private void notConfirmedData()
+    {
+        double dailyAchieve = new DashboardNewDS(getActivity()).getDailyAchieve();
+        double dailyTarget = new DashboardNewDS(getActivity()).getRepTarget() / 30 ;
+        double thisMonthAchieve = new DashboardNewDS(getActivity()).getTMAchieve();
+        double thisMonthTarget = new DashboardNewDS(getActivity()).getRepTarget();
+        double preMonthTarget = new DashboardNewDS(getActivity()).getPMRepTarget();
+
+        tvTMTarget.setText("" + format.format(thisMonthTarget));
+        tvTMAchieve.setText("" + format.format(thisMonthAchieve));
+        tvPMTarget.setText("" + format.format(preMonthTarget));
+        tvAchieve.setText("" + format.format(dailyAchieve));
+        tvTarget.setText("" + format.format(dailyTarget));
     }
 }
 
