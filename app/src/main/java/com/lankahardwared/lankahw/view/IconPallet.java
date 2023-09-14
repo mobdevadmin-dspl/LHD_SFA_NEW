@@ -465,9 +465,16 @@ public class IconPallet extends Fragment implements View.OnClickListener, Downlo
                 break;
 
             case R.id.imgDashboard:
-                imgDashboard.startAnimation(animScale);
-                UtilityContainer.mLoadFragment(new Dashboard_New(), activity);
-//                UtilityContainer.mLoadFragment(new Dashboard(), activity);
+                // need to validate the secondary sync to navigate for the dashboard
+                if (!pref.getTransOrdSumPM().equals("0.0"))
+                {
+                    imgDashboard.startAnimation(animScale);
+                    UtilityContainer.mLoadFragment(new Dashboard_New(), activity);
+                }
+                else
+                {
+                    mDevelopingMessage("Please do the secondary sync", "Secondary sync Required");
+                }
                 break;
 
             case R.id.imgExpense:
