@@ -24,7 +24,6 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -43,7 +42,7 @@ public class Dashboard_New extends Fragment {
 
     private TextView tvSalesGross, tvDiscount, tvNetValue, tvProductive, tvNonprdctive, tvReturn,tvinvoicesale,tvTarget,tvAchieve;
     private TextView tvTMGross, tvTMNet, tvTMReturn, tvTMDiscount, tvTMTarget, tvTMProductive, tvTMNonProductive,tvTMinvoicesale,tvTMAchieve;
-    private TextView tvPMGross, tvPMNet, tvPMReturn, tvPMDiscount, tvPMTarget, tvPMProductive, tvPMNonProductive,tvPMinvoicesale;
+    private TextView tvPMGross, tvPMNet, tvPMReturn, tvPMDiscount, tvPMTarget, tvPMProductive, tvPMNonProductive,tvPMinvoicesale, tvPMAchieve;
     private long timeInMillis;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
@@ -102,6 +101,7 @@ public class Dashboard_New extends Fragment {
         tvPMNonProductive = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_unproductive_calls);
         tvPMinvoicesale = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_invoice_sale_value);
         tvPMTarget = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_target_value);
+        tvPMAchieve = (TextView) rootView.findViewById(R.id.dashboard_tv_card_previous_month_Achievement_calls);
 
        setCurrentMonthFigures();
 
@@ -190,9 +190,13 @@ public class Dashboard_New extends Fragment {
 
     private void notConfirmedData()
     {
-        double dailyAchieve = new DashboardNewDS(getActivity()).getDailyAchieve();
+        //double dailyAchieve = new DashboardNewDS(getActivity()).getDailyAchieve();
+        //double thisMonthAchieve = new DashboardNewDS(getActivity()).getTMAchieve();
+        double dailyAchieve = Double.parseDouble(tvinvoicesale.getText().toString().replace(",","")) - Double.parseDouble(tvReturn.getText().toString().replace(",",""));
+        double thisMonthAchieve = Double.parseDouble(tvTMinvoicesale.getText().toString().replace(",","")) - Double.parseDouble(tvTMReturn.getText().toString().replace(",",""));
+        double previousMonthAchieve = Double.parseDouble(tvPMinvoicesale.getText().toString().replace(",","")) - Double.parseDouble(tvPMReturn.getText().toString().replace(",",""));
+
         double dailyTarget = new DashboardNewDS(getActivity()).getRepTarget() / 30 ;
-        double thisMonthAchieve = new DashboardNewDS(getActivity()).getTMAchieve();
         double thisMonthTarget = new DashboardNewDS(getActivity()).getRepTarget();
         double preMonthTarget = new DashboardNewDS(getActivity()).getPMRepTarget();
 
@@ -201,6 +205,7 @@ public class Dashboard_New extends Fragment {
         tvPMTarget.setText("" + format.format(preMonthTarget));
         tvAchieve.setText("" + format.format(dailyAchieve));
         tvTarget.setText("" + format.format(dailyTarget));
+        tvPMAchieve.setText(""+ format.format(previousMonthAchieve));
     }
 }
 
